@@ -27,6 +27,15 @@ public class GroundController : MonoBehaviour {
 		if(Input.GetKey(KeyCode.R)){
 			SceneManager.LoadScene(currentLevel.name);
 		}
+		if(Input.GetKey(KeyCode.Alpha1)){
+			SceneManager.LoadScene("Level1");
+		}
+		if(Input.GetKey(KeyCode.Alpha2)){
+			SceneManager.LoadScene("Level2");
+		}
+		if(Input.GetKey(KeyCode.Alpha3)){
+			SceneManager.LoadScene("Level3");
+		}
 	}
 
 	void setText(){

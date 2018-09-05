@@ -20,10 +20,10 @@ public class CameraController : MonoBehaviour {
 	}
 
 	void LateUpdate(){
-		//float desiredAngle = target.transform.eulerAngles.y;
-		//Quaternion rotation = Quaternion.Euler(0, desiredAngle, 0);
+		float desiredAngle = target.transform.eulerAngles.y;
+		Quaternion rotation = Quaternion.Euler(0, desiredAngle, 0);
 	
 		transform.position = target.transform.position - offset;//- (rotation * offset);
-		//transform.LookAt(target.transform);
+		transform.LookAt(target.transform);
 	}
 }
