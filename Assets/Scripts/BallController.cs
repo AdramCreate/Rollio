@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BallController : MonoBehaviour {
 
@@ -25,9 +24,21 @@ public class BallController : MonoBehaviour {
 		}
 		if(Input.GetKey(KeyCode.Space)){
             //canJump = true;
-            SceneManager.LoadScene("Level2");
 		}
     }
+
+	/*void OnTriggerEnter(Collider otherObject){
+		if(otherObject.gameObject.CompareTag("enemy")){
+			rb.AddForce(Vector3.forward, ForceMode.Impulse);
+		}
+	}*/
+
+	/*void OnCollisionEnter(Collider otherObject){
+		if(otherObject.gameObject.CompareTag("enemy")){
+			rb.AddForce(new Vector3(0.0f,0.0f, 5f), ForceMode.Impulse);
+		}
+	}*/
+
     void FixedUpdate()
     {
         float moveAD = Input.GetAxis("Horizontal");

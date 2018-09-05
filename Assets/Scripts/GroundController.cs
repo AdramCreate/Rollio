@@ -10,11 +10,13 @@ public class GroundController : MonoBehaviour {
 	public Text countText;
 	private GameObject [] enemies;
 	private int numEnemies;
+	private Scene currentLevel;
 
 	// Use this for initialization
 	void Start () {
 		enemies = GameObject.FindGameObjectsWithTag("enemy");
 		numEnemies = enemies.Length;
+		currentLevel = SceneManager.GetActiveScene();
 	}
 	
 	// Update is called once per frame
@@ -22,6 +24,9 @@ public class GroundController : MonoBehaviour {
         enemies = GameObject.FindGameObjectsWithTag("enemy");
         numEnemies = enemies.Length;
 		setText();
+		if(Input.GetKey(KeyCode.R)){
+			SceneManager.LoadScene(currentLevel.name);
+		}
 	}
 
 	void setText(){

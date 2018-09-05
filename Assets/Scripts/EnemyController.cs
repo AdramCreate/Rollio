@@ -9,13 +9,24 @@ public class EnemyController : MonoBehaviour {
 		//originalHP = hp;
 	}
 
-	void OnTriggerEnter(Collider otherObject){
+	/*void OnTriggerEnter(Collider otherObject){
 		if(otherObject.gameObject.CompareTag("Player")){
 			hp -= 1;
 			if(hp == 0){
 				gameObject.SetActive(false);
 			}
 		}
+	}*/
+
+	void OnCollisionEnter(Collision otherObject){
+        if (otherObject.gameObject.CompareTag("Player"))
+        {
+            hp -= 1;
+            if (hp == 0)
+            {
+                gameObject.SetActive(false);
+            }
+        }
 	}
 
 	void Update(){
