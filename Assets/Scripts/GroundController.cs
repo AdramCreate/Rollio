@@ -36,6 +36,9 @@ public class GroundController : MonoBehaviour {
 		if(Input.GetKey(KeyCode.Alpha3)){
 			SceneManager.LoadScene("Level3");
 		}
+		if(Input.GetKey(KeyCode.Alpha4)){
+			SceneManager.LoadScene("Level4");
+		}
 	}
 
 	void setText(){
