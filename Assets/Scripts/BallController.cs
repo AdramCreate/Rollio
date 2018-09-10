@@ -33,11 +33,11 @@ public class BallController : MonoBehaviour {
 		}
 	}*/
 
-	void OnCollisionEnter(Collider otherObject){
+	/*void OnCollisionEnter(Collider otherObject){
 		if(otherObject.gameObject.CompareTag("enemy")){
 			//rb.AddForce(new Vector3(0.0f,0.0f, 5f), ForceMode.Impulse);
 		}
-	}
+	}*/
 
     void FixedUpdate()
     {
